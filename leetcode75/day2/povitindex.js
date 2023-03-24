@@ -8,13 +8,14 @@
 function povit(nums){
     let left = 0
     let right = nums.reduce((a, b) => a + b);
-for (let i = 0; i < nums.length; ++i) {
+for (let i = 0; i < nums.length; i++) {
+    console.log(i)
     right -= nums[i];
     if (left == right) {
         return i;
     }
     left += nums[i];
-}
+} 
 return -1; 
 }
 console.log(povit([1,7,3,6,5,6]))
