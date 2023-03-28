@@ -52,5 +52,7 @@ let first = new SingleLinkList();
 first.push("hi");
 first.push("shashikant");
 first.push("kumar");
+first.pop()
+first.pop()
 
 console.log(first);
