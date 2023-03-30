@@ -1,13 +1,8 @@
-function powerOfthree(n){
-    if(n<=0) return false
-    let divides = n / 3
-    console.log(divides)
-    if(n == (n - divides)){
-        return true
+var isPowerOfThree = function(n) {
+    while(n>=3){
+        if(n%3!==0) return false;
+        n/=3;
     }
-    return powerOfthree(n - divides)
-
-
-}
-
-console.log(powerOfthree(45))
+    return n===1;
+};
+console.log(isPowerOfThree(27))
