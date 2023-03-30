@@ -46,13 +46,35 @@ class SingleLinkList {
 
 
   }
+  shift(){
+  if(!this.head) return undefined
+  let newHead = this.head
+  this.head = newHead.next
+  this.length--
+  if(this.length ==0){
+   this.tail = null
+  }
+  // console.log(this.head)
+  return newHead
+  }
+  unshift(val){
+  let newNode = new Node(val);
+   if (!this.head) {
+      this.head = newNode;
+      this.tail = this.head;
+    }else{
+      newNode.next = this.head;
+      this.head = newNode;
+      }
+    this.length++
+    return this
+  }
 }
 
 let first = new SingleLinkList();
 first.push("hi");
 first.push("shashikant");
 first.push("kumar");
-first.pop()
-first.pop()
+
 
 console.log(first);
